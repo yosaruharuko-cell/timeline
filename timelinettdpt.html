@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+
+  <!-- TimelineJS -->
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Playfair+Display:wght@400;600&family=Playfair+Display+SC:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      background: #3f5b84;
+      z-index: 9999;
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .header-title {
+      font-family: 'Bitter', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    /* ===== SECTION ===== */
+    .section-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 30px 20px 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .section-desc {
+      margin: 0 20px 20px;
+      color: #555;
+      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    /* ===== TIMELINE ===== */
+    #timeline-world,
+    #timeline-vn {
+      height: 650px;
+      margin-bottom: 40px;
+    }
+
+    /* ===== HEADLINE ===== */
+    .tl-slide .tl-headline {
+      font-family: 'Playfair Display SC', serif !important;
+      font-size: 30px !important;
+      font-weight: 700 !important;
+      color: #1f3a68 !important;
+      line-height: 1.3;
+      text-shadow: none !important;
+    }
+
+    /* ===== TEXT ===== */
+    .tl-slide-content,
+    .tl-slide-content p,
+    .tl-slide-content div {
+      font-family: Arial, sans-serif !important;
+      font-size: 18px !important;
+      line-height: 1.6 !important;
+      color: #222 !important;
+    }
+
+    .tl-slide-content p {
+      margin-bottom: 14px;
+      text-align: justify;
+    }
+
+    /* ===== GIỚI HẠN TEXT CHO GIỐNG BÁO ===== */
+    .tl-text {
+      max-width: 650px;
+    }
+
+    /* ===== FIX KHOẢNG CÁCH ẢNH - TEXT (QUAN TRỌNG) ===== */
+    .tl-slide-content .tl-text {
+      padding-left: 40px !important;   /* 👈 đẩy text ra xa ảnh */
+    }
+
+    .tl-media {
+      margin-right: 30px !important;   /* 👈 tạo khoảng cách phía ảnh */
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-title">
+      Quá trình phát triển của BMĐT
+    </div>
+  </div>
+
+  <!-- THẾ GIỚI -->
+  <div class="section-title">Thế giới</div>
+  <div class="section-desc">
+    Quá trình hình thành và phát triển của báo mạng điện tử trên thế giới,
+    từ những nền tảng đầu tiên của Internet đến các mô hình báo chí hiện đại.
+  </div>
+
+  <div id="timeline-world"></div>
+
+  <!-- VIỆT NAM -->
+  <div class="section-title">Việt Nam</div>
+  <div class="section-desc">
+    Từ cuối những năm 1990, báo mạng điện tử bắt đầu xuất hiện tại Việt Nam
+    và nhanh chóng trở thành một loại hình báo chí chủ đạo.
+  </div>
+
+  <div id="timeline-vn"></div>
+
+  <script>
+    var world = new TL.Timeline(
+      'timeline-world',
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQYVDOv4g8zYa85heTxxBPEV93auVYpGrTSTBVPnQIE3PALZZ-aXVBA3DoK8I92FhZtw_ZdYI-gnFL0/pubhtml',
+      { 
+        initial_zoom: 2,
+        language: 'vi'
+      }
+    );
+
+    var vn = new TL.Timeline(
+      'timeline-vn',
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRwardttD6Lo1hGsZqs0_nTdmNwXxCxVaPWMy7v2jlVY4axlwFvtnu0BT4A8u7f9mY8xFiyeos9agu2/pubhtml',
+      { 
+        initial_zoom: 4,
+        language: 'vi'
+      }
+    );
+  </script>
+
+</body>
+</html>
